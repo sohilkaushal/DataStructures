@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.12)
+project(DataStructures)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(DataStructures main.cpp customVector.cpp customVector.h linkedList.cpp linkedList.h)
