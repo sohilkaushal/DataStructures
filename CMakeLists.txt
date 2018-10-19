@@ -3,4 +3,4 @@ project(DataStructures)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(DataStructures main.cpp customVector.cpp customVector.h linkedList.cpp linkedList.h)
+add_executable(DataStructures main.cpp Vectors/customVector.cpp Vectors/customVector.h "Linked List/linkedList.cpp" "Linked List/linkedList.h")

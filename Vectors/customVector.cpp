@@ -19,7 +19,7 @@ void customVector::increaseCapacity() {
     array = newArray;
 }
 
-int customVector::add(int number) {
+void customVector::add(int number) {
     if (count == capacity) {
         increaseCapacity();
         add(number);
