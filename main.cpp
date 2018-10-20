@@ -8,13 +8,12 @@ using namespace std;
 int main() {
     cout << "Creating Vector" << endl;
     customVector vector;
-    vector.add(1);
-    vector.add(2);
-    vector.add(3);
-    cout << "Testing contains:\t";
-    cout << vector.contains(3) << "\t" << vector.contains(5) << endl;
+    for (int i = 0; i < 9; i++)
+        vector.add(i);
     vector.print();
-    cout << "Creating List" << endl;
+    cout << "Testing contains:\t";
+    cout << vector.contains(3) << "\t" << vector.contains(11) << endl;
+    cout << endl << "Creating List" << endl;
     linkedList list;
     list.addElement(1);
     list.addElement(5);
@@ -23,10 +22,18 @@ int main() {
     list.printList();
     for (int i = 0; i < 9; i++) {
         list.addElement(i);
+        list.printList();
     }
     list.printList();
     cout << "Deleting Last Element" << endl;
     list.deleteLastElement();
     list.printList();
+    cout << "Inserting elements in the front of the Linked List" << endl;
+    for (int i = 0; i < 15; i++) {
+        list.addInFront(i);
+        list.printList();
+    }
+    cout << "Clearing the Linked List" << endl;
+    list.clearList();
     return 0;
 }
