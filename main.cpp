@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Vectors/customVector.h"
 #include "Linked List/linkedList.h"
+#include "Stacks/Stack.h"
 
 using namespace std;
 
@@ -35,5 +36,13 @@ int main() {
     }
     cout << "Clearing the Linked List" << endl;
     list.clearList();
+    cout << "Creating Stack" << endl;
+    stack stackObj;
+    for (int i = 0; i < 9; i++) {
+        cout << "Pushing " << i << " onto the Stack" << endl;
+        stackObj.push(i);
+    }
+    cout << "Popping the stack" << endl;
+    stackObj.clearStack();
     return 0;
 }
