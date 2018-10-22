@@ -2,6 +2,7 @@
 #include "Vectors/customVector.h"
 #include "Linked List/linkedList.h"
 #include "Stacks/Stack.h"
+#include "Queue/queue.h"
 
 using namespace std;
 
@@ -11,12 +12,16 @@ void testVector();
 void testLinkedList();
 
 void testStack();
+
+void testQueue();
+
 // Main Driver Used for testing
 int main() {
     cout << "Current Tests Available " << endl;
     cout << "\tEnter 1 for Vector" << endl;
     cout << "\tEnter 2 for Linked List" << endl;
     cout << "\tEnter 3 for Stack" << endl;
+    cout << "\tEnter 4 for Queue" << endl;
     int choice;
     cin >> choice;
     switch (choice) {
@@ -28,6 +33,9 @@ int main() {
             break;
         case 3:
             testStack();
+            break;
+        case 4:
+            testQueue();
             break;
         default:
             cout << "Invalid Argument" << endl;
@@ -80,4 +88,16 @@ void testStack() {
     }
     cout << "Popping the stack" << endl;
     stackObj.clearStack();
+}
+
+void testQueue() {
+    cout << "Creating Queue" << endl;
+    queue queueObj;
+    cout << "Populating Queue" << endl;
+    for (int i = 0; i < 9; i++)
+        queueObj.enqueue(i);
+    queueObj.display();
+    cout << "Clearing Queue" << endl;
+    queueObj.display();
+    queueObj.emptyQueue();
 }

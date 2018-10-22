@@ -6,8 +6,30 @@
 #define DATASTRUCTURES_QUEUE_H
 
 
-class queue {
+#include <mach/mach_types.h>
 
+class queue {
+    class node {
+    public:
+        int data;
+        node *next;
+    };
+
+    node *front, *back;
+public:
+    queue();
+
+    void enqueue(int element);
+
+    void dequeue();
+
+    node *peek();
+
+    bool isEmpty();
+
+    void display();
+
+    void emptyQueue();
 };
 
 
