@@ -5,8 +5,38 @@
 
 using namespace std;
 
+
+void testVector();
+
+void testLinkedList();
+
+void testStack();
 // Main Driver Used for testing
 int main() {
+    cout << "Current Tests Available " << endl;
+    cout << "\tEnter 1 for Vector" << endl;
+    cout << "\tEnter 2 for Linked List" << endl;
+    cout << "\tEnter 3 for Stack" << endl;
+    int choice;
+    cin >> choice;
+    switch (choice) {
+        case 1:
+            testVector();
+            break;
+        case 2:
+            testLinkedList();
+            break;
+        case 3:
+            testStack();
+            break;
+        default:
+            cout << "Invalid Argument" << endl;
+            break;
+    }
+    return 0;
+}
+
+void testVector() {
     cout << "Creating Vector" << endl;
     customVector vector;
     for (int i = 0; i < 9; i++)
@@ -14,6 +44,9 @@ int main() {
     vector.print();
     cout << "Testing contains:\t";
     cout << vector.contains(3) << "\t" << vector.contains(11) << endl;
+}
+
+void testLinkedList() {
     cout << endl << "Creating List" << endl;
     linkedList list;
     list.addElement(1);
@@ -36,6 +69,9 @@ int main() {
     }
     cout << "Clearing the Linked List" << endl;
     list.clearList();
+}
+
+void testStack() {
     cout << "Creating Stack" << endl;
     stack stackObj;
     for (int i = 0; i < 9; i++) {
@@ -44,5 +80,4 @@ int main() {
     }
     cout << "Popping the stack" << endl;
     stackObj.clearStack();
-    return 0;
 }
