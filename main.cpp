@@ -3,6 +3,7 @@
 #include "Linked List/linkedList.h"
 #include "Stacks/Stack.h"
 #include "Queue/queue.h"
+#include "Trees/tree.h"
 
 using namespace std;
 
@@ -100,4 +101,10 @@ void testQueue() {
     cout << "Clearing Queue" << endl;
     queueObj.display();
     queueObj.emptyQueue();
+}
+
+void testTree() {
+    cout << "Creating Tree" << endl;
+    tree treeObj;
+    treeObj.addElement(nullptr, 5);
 }

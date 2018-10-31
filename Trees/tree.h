@@ -19,6 +19,8 @@ public:
     tree();
 
     void addElement(node *root, int element);
+
+    void searchElement(node *root, int element);
 };
 
 
